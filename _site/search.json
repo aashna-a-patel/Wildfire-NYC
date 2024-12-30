@@ -1,0 +1,44 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "AIR QUALITY ANALYSIS",
+    "section": "",
+    "text": "PM2.5 - fine particulate matter made of dust, soot, and chemicals that pose serious health risks.\n\n\n\n- Trends: PM2.5 varies most.\n\n\n- Peaks: Wildfires drive PM2.5 spikes.\n\n\n- Impact: Wildfires worsen air quality.\n\n\n- Driver: PM2.5 dominates pollution.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n- Pollutants: PM2.5 and Ozone dominate.\n\n\n- Drivers: Wildfires and industry boost PM2.5.\n\n\n- Action: Reduce these for cleaner air."
+  },
+  {
+    "objectID": "dist.html",
+    "href": "dist.html",
+    "title": "DISTRIBUTION",
+    "section": "",
+    "text": "DISTRIBUTION\n\n\n\n\n\n\nMap Overview: Displays regions in NYC, highlighting areas with varying pollution levels.\n\n\nKey Findings:\n\nHotspots: Elevated PM2.5 and SO2 in key areas.\n\nVariation: Pollution varies regionally.\n\nPolicy: Stricter monitoring needed.\n\nTrends: Data aids policy refinement."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site"
+  },
+  {
+    "objectID": "aboutwf.html",
+    "href": "aboutwf.html",
+    "title": "AIR QUALITY ANALYSIS",
+    "section": "",
+    "text": "Hi, I am Aashna Patel, a junior at WTHS. This website was created using RStudio."
+  },
+  {
+    "objectID": "aboutwf.html#about-this-website",
+    "href": "aboutwf.html#about-this-website",
+    "title": "AIR QUALITY ANALYSIS",
+    "section": "About This Website",
+    "text": "About This Website\nThis website provides insights into air quality across New York City, highlighting spatial variations and potential hotspots for pollution. It is designed to support urban planners, policymakers, and the general public in understanding environmental challenges and taking action.\n\nTools and Libraries\n\nR Programming Language: For data analysis and visualization.\nLibraries Used:\n\ntidyverse: For data manipulation and visualization.\nprimer.data: For data exploration.\ngganimate: To create animated plots.\nbrms: For Bayesian regression modeling.\nreadr: For reading data files.\ngtsummary: For summarizing data.\ntransformr: For animation support.\nggplot2: For creating static plots.\ndplyr: For data manipulation.\nplotly: For interactive visualizations.\n\n\n\n\nData Source\nThe data for this analysis is sourced from Data.gov. You can view and download the dataset here.\n\nThank you for visiting and exploring Air Quality Analysis!"
+  },
+  {
+    "objectID": "home.html",
+    "href": "home.html",
+    "title": "INTRODUCTION",
+    "section": "",
+    "text": "INTRODUCTION\nAir pollution threatens public health and urban sustainability. This analysis uses NYC data to map pollution hotspots, identify key contributors, and answer:\nWhich areas in NYC face the highest pollution, and what factors drive these patterns?\nBy uncovering these trends, we aim to guide policies and interventions for better air quality and public health."
+  }
+]

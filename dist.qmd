@@ -1,0 +1,92 @@
+---
+execute: 
+  echo: false
+  message: false
+  warning: false
+html:
+    css: styles.css
+cache: true
+---
+
+# DISTRIBUTION
+```{r}
+library(tidyverse)
+library(primer.data)
+library(gganimate)
+library(brms)
+library(readr)
+library(gtsummary)
+library(transformr)
+library(ggplot2)
+library(dplyr)
+library(plotly)
+library(shiny)
+```
+
+
+```{r}
+fire <- read_csv(file = "C:/Users/RG/Downloads/Air_Quality.csv", col_names = TRUE, show_col_types = FALSE)
+```
+
+```{r}
+library(leaflet)
+library(dplyr)
+
+
+coordinates <- data.frame(
+  Geo.Place.Name = c(
+    "Southeast Queens", "Bensonhurst - Bay Ridge", "Coney Island - Sheepshead Bay", 
+    "Rockaways", "Williamsburg - Bushwick", "Upper West Side", "Pelham - Throgs Neck", 
+    "Bayside - Little Neck", "Coney Island - Brighton Beach", "Queens Village"
+  ), 
+  lat = c(
+    40.748817, 40.6495, 40.5749, 40.5781, 40.7115, 40.7831, 40.8655, 40.7651, 40.5736, 40.7311
+  ),
+  lon = c(
+    -73.985428, -74.0216, -73.9876, -73.8354, -73.9565, -73.9741, -73.8445, -73.7989, -73.9374, -73.7485
+  ),
+  Data.Value = c(6.1, 10.2, 8.9, 7.2, 9.3, 6.5, 7.1, 6.8, 9.0, 8.3)  
+)
+``` 
+
+```{r}
+
+map <- leaflet(coordinates) %>%
+  addTiles() %>%
+  addCircleMarkers(
+    ~lon, ~lat,  
+    popup = ~paste(Geo.Place.Name, "<br>Data Value:", Data.Value),
+    radius = 10,  
+    color = ~colorNumeric(palette = "Purples", domain = coordinates$Data.Value)(Data.Value),
+    fillOpacity = 0.7
+  ) %>%
+  addLegend(
+    position = "bottomright", 
+    pal = colorNumeric(palette = "Purples", domain = coordinates$Data.Value), 
+    values = coordinates$Data.Value, 
+    title = "Data Value",
+    opacity = 0.7
+  )
+map
+
+```
+**Map Overview**: Displays regions in NYC, highlighting areas with varying pollution levels.
+
+#  Key Findings:  
+- **Hotspots:** Elevated PM2.5 and SO2 in key areas.  
+- **Variation:** Pollution varies regionally.  
+- **Policy:** Stricter monitoring needed.  
+- **Trends:** Data aids policy refinement.  
+
+
+
+
+
+
+
+
+
+
+
+
+

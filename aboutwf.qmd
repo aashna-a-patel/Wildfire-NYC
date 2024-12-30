@@ -1,0 +1,67 @@
+---
+html:
+    css: styles.css
+execute: 
+  echo: false
+  message: false
+  warning: false
+---
+Hi, I am Aashna Patel, a junior at WTHS. This website was created using RStudio.
+
+
+<div>
+  <a href="mailto:aashnapatel2008@gmail.com" class="about-btn">
+    Email
+  </a>
+  <a href="https://github.com/aashna-a-patel" class="about-btn">
+    GitHub
+  </a>
+</div>
+
+<style>
+/* Custom styles for buttons */
+.about-btn {
+    background-color: #F06292;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.about-btn:hover {
+    background-color: #eb547c;
+    color: white;
+}
+</style>
+
+## About This Website
+
+This website provides insights into air quality across New York City, highlighting spatial variations and potential hotspots for pollution. It is designed to support urban planners, policymakers, and the general public in understanding environmental challenges and taking action.
+
+
+### Tools and Libraries
+
+- **R Programming Language**: For data analysis and visualization.
+- **Libraries Used:**
+  - `tidyverse`: For data manipulation and visualization.
+  - `primer.data`: For data exploration.
+  - `gganimate`: To create animated plots.
+  - `brms`: For Bayesian regression modeling.
+  - `readr`: For reading data files.
+  - `gtsummary`: For summarizing data.
+  - `transformr`: For animation support.
+  - `ggplot2`: For creating static plots.
+  - `dplyr`: For data manipulation.
+  - `plotly`: For interactive visualizations.
+
+### Data Source
+
+The data for this analysis is sourced from Data.gov. You can view and download the dataset [here](https://catalog.data.gov/dataset/air-quality).
+
+---
+
+Thank you for visiting and exploring Air Quality Analysis!

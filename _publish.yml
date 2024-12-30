@@ -1,0 +1,4 @@
+- source: project
+  quarto-pub:
+    - id: b0b05127-64ef-4742-b992-80b4f75ff79d
+      url: 'https://aashnapatel2008.quarto.pub/air-quality-analysis'

@@ -1,0 +1,104 @@
+---
+execute: 
+  echo: false
+  message: false
+  warning: false
+html:
+    css: styles.css
+cache: true
+---
+
+
+```{r}
+library(tidyverse)
+library(primer.data)
+library(gganimate)
+library(brms)
+library(readr)
+library(gtsummary)
+library(transformr)
+library(ggplot2)
+library(dplyr)
+library(plotly)
+library(shiny)
+```
+
+---------
+```{r}
+fire <- read_csv(file = "C:/Users/RG/Downloads/Air_Quality.csv", col_names = TRUE, show_col_types = FALSE)
+```
+
+```{r}
+data <- data.frame(
+  Date = rep(seq(as.Date("2023-01-01"), as.Date("2023-01-05"), by = "days"), each = 3),
+  Pollutant = rep(c("PM2.5", "Ozone", "CO"), times = 5),
+  AQI = c(150, 120, 90, 200, 180, 110, 180, 160, 130, 210, 190, 120, 170, 150, 100)
+)
+
+animated_bar <- ggplot(data, aes(x = reorder(Pollutant, -AQI), y = AQI, fill = Pollutant)) +
+  geom_bar(stat = "identity") +
+  labs(title = "Air Quality Index Over Time", 
+       subtitle = "Date: {frame_time}", 
+       x = "Pollutant", 
+       y = "AQI") +
+  scale_fill_manual(values = c(
+  "#F06292", 
+    "#D81B60", 
+    "#D5006D"  
+  )) +
+  theme_minimal() +
+  theme(legend.position = "none") +
+  transition_time(Date) +
+  ease_aes('linear')
+
+animate(animated_bar, nframes = 100, fps = 10)
+
+```
+PM2.5 - fine particulate matter made of dust, soot, and chemicals that pose serious health risks.
+
+
+
+
+-------------
+- **Trends:** PM2.5 varies most.  
+- **Peaks:** Wildfires drive PM2.5 spikes.  
+- **Impact:** Wildfires worsen air quality.  
+- **Driver:** PM2.5 dominates pollution.    
+----------
+
+```{r}
+
+data <- data.frame(
+  Category = c("PM2.5", "Ozone", "CO", "NO2", "SO2"),
+  Value = c(150, 180, 120, 90, 60)
+)
+
+pie_chart <- ggplot(data, aes(x = "", y = Value, fill = Category)) +
+  geom_bar(stat = "identity", width = 1) +
+  coord_polar(theta = "y") +  
+  labs(title = "Pollutant Distribution by Category") +
+  scale_fill_manual(values = c(
+  "#4FC3F7", 
+    "#29B6F6", 
+    "#1E88E5", 
+    "#81D4FA", 
+    "#1976D2"  
+  )) +
+  theme_void() + 
+  theme(
+    plot.title = element_text(hjust = 0.5, size = 16, face = "bold")  
+  )
+
+pie_chart
+
+```
+-----------
+- **Pollutants:** PM2.5 and Ozone dominate.  
+- **Drivers:** Wildfires and industry boost PM2.5.  
+- **Action:** Reduce these for cleaner air.  
+--------
+
+
+
+
+

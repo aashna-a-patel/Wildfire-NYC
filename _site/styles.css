@@ -1,0 +1,182 @@
+/* General Styles */
+body {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  background-color: #f4f9f4; /* Light green background */
+  color: #333; /* Dark gray text for readability */
+  margin: 0;
+  line-height: 1.6;
+  padding: 0;
+}
+
+/* Header */
+header {
+  background: linear-gradient(135deg, #2e8b57, #3cb371); /* Soft green gradient */
+  color: #ffffff;
+  padding: 60px 10%;
+  text-align: center;
+  border-bottom: 4px solid #006400; /* Dark green accent */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+header h1 {
+  font-size: 4.5em;
+  font-weight: 1000;
+  letter-spacing: 2px;
+  font-family: Monospace;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin: 0;
+  text-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Slight shadow for depth */
+}
+
+header p {
+  font-size: 1.2em;
+  margin-top: 15px;
+  font-weight: 300;
+  opacity: 0.9;
+}
+
+/* Navigation Bar */
+nav {
+  background-color: #eaf9e6; /* Pale green */
+  padding: 20px 8%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+nav a {
+  color: #2e8b57; /* Sea green */
+  text-decoration: none;
+  margin: 0 25px;
+  font-size: 1.1em;
+  font-weight: 500;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+nav a:hover {
+  color: #006400; /* Dark green */
+  text-decoration: underline;
+  transform: translateY(-2px);
+}
+
+/* Main Content */
+main {
+  padding: 40px 10%;
+  background-color: #ffffff; /* White background for content */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  margin-top: 30px;
+}
+
+main h2 {
+  color: #2e8b57; /* Sea green */
+  font-weight: 700;
+  font-size: 2.2em;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #3cb371; /* Medium sea green */
+  padding-bottom: 10px;
+}
+
+main p, main ul, main ol {
+  margin: 20px 0;
+  font-size: 1.1em;
+  color: #333;
+}
+
+main ul li {
+  margin: 15px 0;
+}
+
+/* Tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 30px 0;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+table th, table td {
+  border: 1px solid #dee2e6; /* Light gray border */
+  padding: 12px 20px;
+  text-align: left;
+  transition: background-color 0.3s ease;
+}
+
+table th {
+  background-color: #2e8b57; /* Sea green */
+  color: #ffffff;
+  font-weight: 600;
+}
+
+table td {
+  background-color: #f9f9f9; /* Light gray for readability */
+}
+
+table td:hover {
+  background-color: #eaf9e6; /* Pale green on hover */
+}
+
+/* Buttons */
+button {
+  background-color: #3cb371; /* Medium sea green */
+  color: #ffffff;
+  border: none;
+  padding: 14px 30px;
+  font-size: 1.1em;
+  cursor: pointer;
+  border-radius: 30px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+  background-color: #2e8b57; /* Darker green */
+  transform: translateY(-3px);
+}
+
+/* Footer */
+footer {
+  background: linear-gradient(135deg, #2e8b57, #3cb371);
+  color: #ffffff;
+  text-align: center;
+  padding: 25px 0;
+  margin-top: 40px;
+  font-size: 1.1em;
+  border-radius: 25px 25px 0 0;
+}
+
+footer a {
+  color: #ffffff;
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+footer a:hover {
+  text-decoration: none;
+  color: #006400; /* Dark green */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  header, nav, main, footer {
+    padding: 20px;
+  }
+
+  header h1 {
+    font-size: 2.8em;
+  }
+
+  nav a {
+    font-size: 1em;
+  }
+
+  main h2 {
+    font-size: 1.9em;
+  }
+
+  main p, main ul, main ol {
+    font-size: 1em;
+  }
+}
