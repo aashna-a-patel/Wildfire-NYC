@@ -78,7 +78,7 @@ data <- data.frame(
 plot_ly(data, labels = ~Category, values = ~Value, type = 'pie',
         textinfo = 'none',  # No text on slices
         hoverinfo = 'label+value+percent',  # Info on hover
-        marker = list(colors = c("#4FC3F7", "#29B6F6", "#1E88E5", "#81D4FA", "#1976D2"))
+        marker = list(colors = c("#f763b5", "#813ea8", "#d166f2", "#81D4FA", "#1976D2"))
 ) %>%
   layout(title = "Pollutant Distribution by Category",
          legend = list(orientation = "v", x = 1, y = 0.9),
