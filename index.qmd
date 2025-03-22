@@ -66,30 +66,23 @@ PM2.5 - fine particulate matter made of dust, soot, and chemicals that pose seri
 - **Driver:** PM2.5 dominates pollution.    
 ----------
 
-```{r}
 
+```{r}
+# Sample data
 data <- data.frame(
   Category = c("PM2.5", "Ozone", "CO", "NO2", "SO2"),
   Value = c(150, 180, 120, 90, 60)
 )
 
-pie_chart <- ggplot(data, aes(x = "", y = Value, fill = Category)) +
-  geom_bar(stat = "identity", width = 1) +
-  coord_polar(theta = "y") +  
-  labs(title = "Pollutant Distribution by Category") +
-  scale_fill_manual(values = c(
-  "#4FC3F7", 
-    "#29B6F6", 
-    "#1E88E5", 
-    "#81D4FA", 
-    "#1976D2"  
-  )) +
-  theme_void() + 
-  theme(
-    plot.title = element_text(hjust = 0.5, size = 16, face = "bold")  
-  )
-
-pie_chart
+# Create plotly pie chart
+plot_ly(data, labels = ~Category, values = ~Value, type = 'pie',
+        textinfo = 'none',  # No text on slices
+        hoverinfo = 'label+value+percent',  # Info on hover
+        marker = list(colors = c("#4FC3F7", "#29B6F6", "#1E88E5", "#81D4FA", "#1976D2"))
+) %>%
+  layout(title = "Pollutant Distribution by Category",
+         legend = list(orientation = "v", x = 1, y = 0.9),
+         margin = list(l = 20, r = 20, t = 50, b = 20))
 
 ```
 -----------
@@ -97,8 +90,3 @@ pie_chart
 - **Drivers:** Wildfires and industry boost PM2.5.  
 - **Action:** Reduce these for cleaner air.  
 --------
-
-
-
-
-
